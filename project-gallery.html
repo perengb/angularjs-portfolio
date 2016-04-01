@@ -1,0 +1,8 @@
+<div ng-show="project.images.length" class="gallery">
+    <img id="{{project.name}}image" ng-src="{{project.images[gallery.current]}}" class="img img-responsive img-thumbnail center-block" />
+    <ul class=" thumbs clearfix">
+        <li ng-repeat="image in project.images" class="img-thumb small-image img-responsive thumbnail">
+            <a href="#{{project.name}}image"><img ng-click="gallery.setCurrent($index)" ng-src="{{image}} "/></a>
+        </li>
+    </ul>
+</div>
